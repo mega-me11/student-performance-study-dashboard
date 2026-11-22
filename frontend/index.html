@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Performance Dashboard</h1>
+        <p>Analyse student study hours and academic performance</p>
+    </header>
+
+    <main class="container">
+
+        <section class="summary-cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Marks</h3>
+                <p id="averageMarks">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Study Hours</h3>
+                <p id="averageHours">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Highest Marks</h3>
+                <p id="highestMarks">Loading...</p>
+            </div>
+
+        </section>
+
+        <section class="student-section">
+            <h2>Student Performance Details</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Study Hours</th>
+                        <th>Marks</th>
+                        <th>Performance</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                    <tr>
+                        <td colspan="4">Loading student data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="charts-section">
+            <h2>Performance Analysis</h2>
+
+            <div class="chart-container">
+
+                <div class="chart-box">
+                    <h3>Student Marks Comparison</h3>
+                    <canvas id="marksChart"></canvas>
+                </div>
+
+                <div class="chart-box">
+                    <h3>Study Hours vs Marks</h3>
+                    <canvas id="studyChart"></canvas>
+                </div>
+
+            </div>
+        </section>
+
+        <p id="errorMessage" class="error"></p>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
